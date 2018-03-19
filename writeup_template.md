@@ -10,7 +10,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image1]: ./output_images/data.JPG
 [image2]: ./output_images/Hog_Visualisation.JPG
-[image3]: ./output_images/sliding_windows.jpg
+[image3]: ./output_images/all_windows.png
 [image4]: ./output_images/testResults.png
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/labels_map.png
@@ -142,9 +142,7 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 The video pipeline is slighlty differently handled than the test images pipeline. 
 
-Inorder to remove false positives. I used an averaging approach in the video pipeline that sums all the heats coming in the past 10 frames and then I apply threshold using the function `apply_threshold`. This function blacks out the pixels who have value less than threshold value.
-
-
+Inorder to remove false positives. I used an averaging approach in the video pipeline that sums all the heats coming in the past 10 frames and then I apply threshold using the function `apply_threshold`. This function blacks out the pixels who have value less than threshold value. The result was pretty good. 
 
 ---
 
@@ -152,5 +150,11 @@ Inorder to remove false positives. I used an averaging approach in the video pip
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-  1. 
+Problems/issues:
+
+1. It took a lot of time for parameter tuning. Still was not able to fully eliminate false positives. 2 or 3 false positives still exists.
+2. Processing time for the video was more. Tried implementing hog subsampling but it lead to even more increase in processing time.
+3. The cars coming from the opposite lane were also detected. Inorder to resolve that, I initialsed the sliding window's position to a center the of the driving lane in the video.
+
+Improvements: A CNN approach or more specifically YOLO architecture might help to make more accurate detections with less data preprocessing and parameter tuning. I am currently working on the implementation. 
 
