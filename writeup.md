@@ -151,7 +151,7 @@ Problems/issues:
 
 1. It took a lot of time for parameter tuning. Still was not able to fully eliminate false positives. 2 or 3 false positives still exists.
 2. Processing time for the video was more. Tried implementing hog subsampling but it lead to even more increase in processing time.
-3. The cars coming from the opposite lane were also detected. Inorder to resolve that, I initialsed the sliding window's position to a center the of the driving lane in the video.
+3. The cars coming from the opposite lane were also detected. Inorder to resolve that, I initialsed the sliding window's position tot the center of the driving lane in the video.
 
 Improvements: A CNN approach or more specifically YOLO architecture might help to make more accurate detections with less data preprocessing and parameter tuning. I am currently working on the implementation. 
 
