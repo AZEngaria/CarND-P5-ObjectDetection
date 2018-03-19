@@ -12,12 +12,9 @@ The goals / steps of this project are the following:
 [image2]: ./output_images/Hog_Visualisation.JPG
 [image3]: ./output_images/all_windows.png
 [image4]: ./output_images/testResults.png
-[image5]: ./examples/bboxes_and_heat.png
-[image6]: ./examples/labels_map.png
-[image7]: ./examples/output_bboxes.png
 [image10]: ./output_images/heatMap.JPG
 [image11]: ./output_images/boundingbox.JPG
-[video1]: ./project_video.mp4
+[video1]: ./output.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
